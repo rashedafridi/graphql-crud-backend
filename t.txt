@@ -1,0 +1,60 @@
+
+# mutation{
+#   createUser(userInput:{email:"test@test.com",name:"rashed",password:"123456"}){
+#     _id
+#     email
+#   }
+# }
+
+# mutation{
+#   createStudent(studentInput:{email:"ras2@gmail.com",name:"rashed Afridi",phone:"+8801963278613",dateOfBirth:"10/10/20",subjectId:["60d752a91bf9fb2968691c96"]}){
+# 	_id
+#  email
+#  phone
+#  name
+#  dateOfBirth
+#   }
+# }
+
+
+# mutation{
+#   createSubject(SubjectInput:{name:"math2",studentId:["60d790e65f22003b28dd124d","60d78f64983abc42586b5a6a"]}){
+# 	_id
+# 	name
+#   }
+# }
+# mutation{
+#   updateSubject(id:"60d79649b846622910b24be7", SubjectInput:{name:"hairMath",studentId:["60d790e65f22003b28dd124d","60d78f64983abc42586b5a6a"]}){
+# 	_id
+# 	name
+#   }
+# }
+# mutation{
+#   deleteSubject(id:"60d79649b846622910b24be7")
+# }
+# query{
+#   getSubject(page: 1){
+#    Subjects {
+#       _id
+#       name
+#     students{
+#       _id
+#       name
+#       email
+#     }
+#   }
+#   totalSubjects
+#   }
+# }
+
+# query{
+#   posts(page: 1){
+#    posts {
+#       _id
+#       title
+#       content
+#       imageUrl
+#   }
+#   totalPosts
+#   }
+# }
